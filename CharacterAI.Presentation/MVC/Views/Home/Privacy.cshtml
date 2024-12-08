@@ -1,0 +1,54 @@
+﻿@model List<string>
+
+@for (int i = 0; i < Model.Count; i++)
+{
+    if (i % 2 == 0)
+    {
+        <div class="chat chat-start" style="margin-left: 20%;">
+        <div class="chat-image avatar">
+            <div class="w-10 rounded-full">
+            <img
+                alt="Tailwind CSS chat bubble component"
+                src="https://w7.pngwing.com/pngs/805/551/png-transparent-spiderman-head.png" />
+            </div>
+        </div>
+        <div class="chat-header">
+            Spiderman
+        </div>
+        <div class="chat-bubble">@Model[i]</div>
+        </div>
+    }
+    else
+    {
+        <div class="chat chat-end" style="margin-right: 20%;">
+            <div class="chat-image avatar">
+                <div class="w-10 rounded-full">
+                <img
+                    alt="Tailwind CSS chat bubble component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </div>
+            </div>
+            <div class="chat-header">
+                You
+            </div>
+            <div class="chat-bubble">@Model[i]</div>
+        </div>
+    }
+
+}
+
+
+
+
+<form action="Privacy" method="post">
+
+    <div style="margin-left: 30%;">
+        <input
+        name="message"
+        type="text"
+        placeholder="Type here"
+        class="input input-bordered input-info w-full max-w-xs" />
+
+        <button class="btn btn-outline">Send Message</button>
+    </div>
+</form>
